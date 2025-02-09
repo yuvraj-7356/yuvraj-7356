@@ -1,0 +1,179 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Sakshi 🥹</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: url('https://i.pinimg.com/originals/6f/7f/dc/6f7fdcebfdbbba33915b4b6c30be35f5.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .container {
+            margin-top: 100px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 26px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .bear-gif {
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .buttons {
+            margin-top: 30px;
+        }
+        
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        .yes-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .no-btn {
+            background-color: #ff4d4d;
+            color: white;
+            position: absolute;
+        }
+        
+        .progress-bar {
+            width: 80%;
+            height: 10px;
+            background: lightgray;
+            border-radius: 10px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        
+        .progress {
+            width: 0%;
+            height: 100%;
+            background: #ff4d79;
+            transition: width 0.5s ease-in-out;
+        }
+        
+        #finalGif {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img id="bearGif" class="bear-gif" src="https://media-hosting.imagekit.io//f71ae49d056f4439/IMG_1743.gif?Expires=1833700863&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zcQL2WK4o2nQ8F9xLBejKZfbwfG-M8PVEakYLWicYGZJ88hjT9vh0az7mSsyW-VX10bzEmH2KjZiVTre~05tpHnS1KW4Pi~EfQe8djj7NzMgzbKZPs-v70dXuUkUFFgAhWZWg2YFuZgu2N5KCcJTY09xtyTNUUFQs0e7bWNDaGSSBXknxRFHCRAFbsmiukOUeycUxzObknn6N0hhBcW77U8OKDMTTR-bEb-jMHwTYRXpqe~9FJaJn8f0aqx1n16cqDRCifAINB-i-0f7bWVWRhvI5sLq7iGRfjEJoyMsawg17cJhucXfqrtnoB42FkNL2~chMJZLO2FjOxG1EcA55Q__">
+        <h1 id="message">Kya tu abhi bhi gussa h? 🥹</h1>
+        
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        
+        <div class="buttons">
+            <button class="yes-btn" onclick="nextPage()">Hnn</button>
+            <button class="no-btn" id="noButton" onclick="handleNoClick()">Nhi</button>
+        </div>
+        
+        <div id="finalGif">
+            <img src="https://media-hosting.imagekit.io//d4e409a16a144f5a/f7cdc30f-4c68-4ea0-a438-369c0369080c.jpeg?Expires=1833699158&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=aeHzGIhLc351gYmRoktfNTCen0UVJj2RFZgeXgynoPk53WhU3xyQ1a~PJ-og2iz0XZxWltLqKpwClqwPeQwruD~vq2pPyqF6RWno9s0d-QaVx29USxiTgrchQ6Lr3-3aVW80dHFKQm2OrA0XJRaMV~81~9V910ggcMtzyGYU5JbJSd06aBmTHqJE~602ENSkCBS9UmDOlQHwoKIIV56rB2Ma7sMoKeLe24LCDIDc~gAdi1gcpzVNV7YWheHjzCX~O0~jNj~LRb0AUmbV9SiK7aMXJeUcXdH8y8CCNbFExJxp2gNxAicC5ZrTbJ5CQsIMNyJfu3r3nPrLCaIoIeDaOg__" width="200px">
+            <h2><b>Hurray! 🥳 You're the best! ❤️</b></h2>
+        </div>
+    </div>
+
+    <script>
+        let messages = [
+            'Kya tu abhi bhi gussa h? 🥹',
+            'Sakshi, will you forgive me after this? 🥺',
+            ' pls Forgive me if I lie to you again, so blow me away like this ball.still angry? 🥺',
+            'Tujhe Ghewar ki kasam, maan ja naa please 🥺',
+        ];
+        let gifs = [
+            "YOUR_UPLOADED_IMAGE_URL_HERE",
+            "https://media-hosting.imagekit.io//23997a8782954290/IMG_1745.png?Expires=1833701573&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PERaIB21NUWK7Q96unVhZdykZRht4Ac0iRmxYZUuEFAeV3h7jVDFPfYi~l7o553VmXwbcSBpZWQT~kfGKD-IjoixvzL35HKVkGXXUfkIeTBGuKH33U5OISfZnXCo-gCvtluy6cMahvZD4et3b4Cvm36mwzyPARyTgOMoiFXyaF8kpG7hwmIpX5sJOE0lMD6jCconEncGqaxLEghaQpq~SPftWYbz3YhLppUG5slLd~JFtHebbp-n3Bcyads-wcnQY1hJjbgFF4-RTxiU3Ax4VMvMtRLDtVk741Xr-4gMgRvhRjUEXbU0ovZ3hXeDr5JnF~O1mwnNUcXLKjwMrZSLkw__",
+            "https://media-hosting.imagekit.io//226c38d8c7b548d3/F89486B8-A84B-4C6C-933B-EB92D325BBD0.mov?Expires=1833704728&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=HZ0zEXXmMRVJgP3lEkHfDngd7pO7o9NgB8EXvLgUuEcpY0ChPBC6zKoEdn8HkD7S3r~9nGiumU0hN29tnF5IZG2v-M5WxoovzHzlNlhTeJRzjkjZ2F3XcnUrVwI~1mCa8imE8H3HRXqkdFm3pXun8YH0igu-vjilSb2CcHObAvMvyyz1SDft8P~qxtIZKUCmy57ZDSz5Uv8wRdk13~sM9Fbr2Htc~exxrqYGFOvMhyGGZMff0-ed9F-W0yg3dOOGzA3ToZ9GhaKJOYmry9yRrXCf8QR089moWquR02LJqeheL4yDUg~cv-NJHfe8j0Xzm2I9iVA5JuIV6AIYypi-Zw__",
+            "https://media-hosting.imagekit.io//45df2ee84ade4695/IMG_1747.gif?Expires=1833702586&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nQy5TGbrm6jgFDPqmuzIcl-DIiY~V9G65GrSpQwJp3N9-DfJiZzRqP3rojRd8bAtZSVj5h-UWLkWWZU~AIYNNGwU5ngmChj9cFelIutXg3OGHzuzbbdJnlKxzx4D35CP4l0TadUOTTeR9KNXNs2rH0gydODB~5cpMh22D9q13lOEBGYJjj6UqMl0zz7cIe9ygwFQrqJZKV7t1TjDwDHGsYBWGz~VmxbQxrJ5v38jC7EyFTCW-~BNnUPbV0YxTHXvTsk-9Ae8dUfJ3McAXvBYj5hpHgv4jXVy7cQpxljHQdD5PdHj52AiiJkbXHka-eXMd5uEOTWmfPSBjn2v3Scy0Q__"
+        ];
+        let index = 0;
+        let noButtonMoving = false;
+
+        function nextPage() {
+            if (index < messages.length - 1) {
+                index++;
+                document.getElementById("message").innerHTML = messages[index];
+                document.getElementById("bearGif").src = gifs[index];
+
+                document.getElementById("progress").style.width = ((index + 1) / messages.length) * 100 + "%";
+
+                if (index === 1) {
+                    document.getElementById("noButton").innerText = "Nhi Abhi or Bhav Khaungi"; // Change "Nhi" to "Nhi Abhi or Bhav Khaungi" on Page 2
+                } else {
+                    document.getElementById("noButton").innerText = "Nhi";
+                }
+
+                if (index === 3) {
+                    noButtonMoving = true;
+                    document.getElementById("noButton").setAttribute("onmouseover", "moveButton()");
+                }
+            } else {
+                showHurray();
+            }
+        }
+
+        function handleNoClick() {
+            if (index === 1) {
+                nextPage(); // If "Abhi or Bhav Khaungi" is clicked on Page 2, move to the next page
+            } else {
+                showHurray();
+            }
+        }
+
+        function showHurray() {
+            document.querySelector(".buttons").style.display = "none";
+            document.getElementById("finalGif").style.display = "block";
+        }
+
+        function moveButton() {
+            const button = document.getElementById("noButton");
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
